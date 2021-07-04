@@ -11,8 +11,31 @@ import '../assets/styles/App.scss';
 
 const API = 'http://localhost:3000/initalState';
 
-const App = () => {
-  const initialState = useTvShowsApi(API);
+const App = () => (
+  <div className="App">
+    <Layout>
+      <Header />
+      <Search />
+
+      <Categories >
+        <Carousel>
+          <CarouselItem />
+          <CarouselItem />
+          <CarouselItem />
+          <CarouselItem />
+        </Carousel>
+      </Categories>
+      
+      <Footer/>
+    </Layout>
+  </div>
+
+);
+
+/* {
+
+  
+  /* const initialState = useTvShowsApi(API);
   return initialState.length === 0 ? <h1>Loading...</h1> : (
     <Layout>
       <Header />
@@ -41,8 +64,8 @@ const App = () => {
         </Carousel>
       </Categories>
       <Footer />
-    </Layout>
-  );
-}
+    </Layout> 
+  ); 
+} */
 
 export default App;
