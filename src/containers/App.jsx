@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Layout from '../components/Layout';
 import Header from '../components/Header';
 import Search from '../components/Search';
@@ -11,45 +11,9 @@ import '../assets/styles/App.scss';
 
 const API = 'http://localhost:3000/initalState';
 
-const App = () => (
-  <div className="App">
-    <Layout>
-      <Header />
-      <Search />
+const App = () => {
 
-      <Categories title="Mi Lista" >
-        <Carousel>
-          <CarouselItem />
-          <CarouselItem />
-          <CarouselItem />
-          <CarouselItem />
-        </Carousel>
-      </Categories>
-
-      <Categories title="Tendencias">
-        <Carousel>
-          <CarouselItem />
-          <CarouselItem />
-        </Carousel>
-      </Categories>
-
-      <Categories title="Originales de Platzi Video">
-        <Carousel>
-          <CarouselItem />
-          <CarouselItem />
-        </Carousel>
-      </Categories>
-
-      <Footer />
-    </Layout>
-  </div>
-
-);
-
-/* {
-
-  
-  /* const initialState = useTvShowsApi(API);
+  const initialState = useTvShowsApi(API);
   return initialState.length === 0 ? <h1>Loading...</h1> : (
     <Layout>
       <Header />
@@ -78,8 +42,8 @@ const App = () => (
         </Carousel>
       </Categories>
       <Footer />
-    </Layout> 
-  ); 
-} */
+    </Layout>
+  );
+}
 
 export default App;
