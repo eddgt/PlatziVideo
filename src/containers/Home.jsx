@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
-import Layout from "../components/Layout";
-import Header from "./Header";
+
 import Search from "../components/Search";
 import Carousel from "../components/Carousel";
 import CarouselItem from "../components/CarouselItem";
 import Categories from "../components/Categories";
-import Footer from "./Footer";
+
 import useTvShowsApi from "../hooks/useTvShowsApi";
 import "../assets/styles/App.scss";
 
